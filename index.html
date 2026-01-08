@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elite Hair Salon</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9") center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.6);
+      padding: 15px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Elite Hair Salon</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Look Fresh. Feel Confident.</h1>
+</div>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Hair Cut</h3>
+      <p>Professional styling for men & women</p>
+    </div>
+    <div class="card">
+      <h3>Beard Styling</h3>
+      <p>Perfect beard shape & trim</p>
+    </div>
+    <div class="card">
+      <h3>Hair Color</h3>
+      <p>Premium quality hair colors</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Elite Hair Salon offers modern haircuts, beard styling, and grooming services.
+    Our professional stylists make sure you leave looking your best.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Book Appointment</h2>
+  <form onsubmit="bookAppointment(event)">
+    <input type="text" placeholder="Your Name" required />
+    <input type="tel" placeholder="Phone Number" required />
+    <textarea placeholder="Message / Preferred Time"></textarea>
+    <button class="btn" type="submit">Book Now</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Elite Hair Salon. All rights reserved.</p>
+</footer>
+
+<script>
+  function bookAppointment(e) {
+    e.preventDefault();
+    alert("Appointment request sent! We will contact you soon.");
+  }
+</script>
+
+</body>
+  </html>
+  
